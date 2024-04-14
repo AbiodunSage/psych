@@ -15,21 +15,7 @@ import {
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 import { Link as ReactRouterLink } from "react-router-dom";
-import { app, auth } from "../../../Firebase/Firebase";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    //signed up
-    const user = userCredential.user;
-    //...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    //..
-  });
 const SignUp = () => {
   const [formInput, setFormInput] = useState({
     username: "",
